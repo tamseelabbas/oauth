@@ -7,6 +7,10 @@ router.get('/login', (req, res) => {
     res.render('login', { user: req.user });
 });
 
+// auth login
+router.get('/home', (req, res) => {
+    res.render('home', { user: req.user });
+});
 
 
 

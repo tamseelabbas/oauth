@@ -10,9 +10,9 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // connect to mongodb
-mongoose.connect(keys.mongodb.dbURI, () => {
-    console.log('connected to mongodb');
-});
+// mongoose.connect(keys.mongodb.dbURI, () => {
+//     console.log('connected to mongodb');
+// });
 
 // set up routes
 app.use('/auth', authRoutes);
@@ -22,6 +22,6 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.listen(80, () => {
+app.listen(3000, () => {
     console.log('app now listening for requests on port 3000');
 });
